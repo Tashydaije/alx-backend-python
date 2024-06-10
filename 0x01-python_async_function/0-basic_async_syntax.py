@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+"""Module containing a coroutine that waits for a random delay
+    then returns the delay count
+"""
+
+import asyncio
+import random
+
+
+async def wait_random(max_delay: int = 10) -> float:
+    """
+    Asynchronous coroutine that waits for a random
+    delay between 0 and max_delay seconds
+    and then returns the actual delay.
+
+    Args:
+        max_delay (int): The maximum delay in seconds. Defaults to 10.
+
+    Returns:
+        float: The actual delay time in seconds.
+    """
+    delay = random.uniform(0, max_delay)
+    await asyncio.sleep(delay)
+    return delay
