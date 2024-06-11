@@ -9,7 +9,7 @@ from typing import Awaitable
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime() -> Awaitable[float]:
+async def measure_runtime() -> float:
     """ Measures the runtime of executing 'async_comprehension' 4 times
 
         Params: None
